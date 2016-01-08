@@ -1,6 +1,7 @@
 /**
  * A jQuery-free verison of the popular 'TimeAgo' plugin, configured as an AngularJS filter.
- * @version v0.1 - 2016-01-07 * @link https://github.com/matt-neill/angular-fuzzytime
+ * @version v1.0.0
+ * @link https://github.com/matt-neill/angular-fuzzytime
  * @author Matt Neill <matt@poetretail.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
