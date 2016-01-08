@@ -1,0 +1,29 @@
+{
+  "name": "angular-fuzzytime",
+  "authors": [
+    "Matt Neill <matt@poetretail.com>"
+  ],
+  "description": "A jQuery-free verison of the popular 'TimeAgo' plugin, configured as an AngularJS filter.",
+  "main": "fuzzytime.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "fuzzytime",
+    "angular",
+    "angularjs",
+    "timeago",
+    "time",
+    "date",
+    "filter"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/matt-neill/angular-fuzzytime",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
