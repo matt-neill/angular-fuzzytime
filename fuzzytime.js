@@ -76,7 +76,7 @@ angular.module('angular.fuzzytime', [])
            d.date = Math.round((now-date)/(1000*60));  // calculate minutes
 
    //minutes
-           FuzzyTime = d.date >= 50 ? 'an hour' : '' + d.date + ' minutes' + (suffix ? suffix : '');
+           FuzzyTime = (d.date >= 50 ? 'an hour' : '' + d.date + ' minutes') + (suffix ? suffix : '');
 
            if (d.date > 25 && d.date < 40){
              FuzzyTime = 'half an hour' + (suffix ? suffix : '');
