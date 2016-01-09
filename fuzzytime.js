@@ -39,10 +39,11 @@ angular.module('angular.fuzzytime', [])
        }
 
      // months
-       else if ( d.date >= 24 ){ //if the number of days is over 20, it's about more than a month
+       else if ( d.date >= 27 ){ //if the number of days is over 27, it's about more than a month
          var leftovers = d.date % 28;
          d.date = Math.floor(d.date/28);//round down
          if (leftovers > 24) {
+           if (d.date === 0) d.date ++;
            FuzzyTime = (d.date == 1 ? 'a' : d.date) + ' month'+ (d.date == 1 ? '' : 's') + (suffix ? suffix : '');
          }
          else {
@@ -52,19 +53,14 @@ angular.module('angular.fuzzytime', [])
        }
 
     //weeks
-       else if (d.date < 24 && d.date >= 7) { //if more than 7 days, but less than 24
+       else if (d.date < 27 && d.date >= 7) { //if more than 7 days, but less than 27
          d.date = Math.floor(d.date/7); // calculate weeks
          FuzzyTime = (d.date == 1 ? 'a' : d.date) + ' week'+ (d.date == 1 ? '' : 's') + (suffix ? suffix : '');
        }
 
    //days
-       else if (d.date >= 1 && d.date < 7){
-         if (d.date === 1){  // if only one day has elapsed
-           FuzzyTime = 'yesterday';
-         }
-         else {
-           FuzzyTime = ' '+ d.date + ' days' + (suffix ? suffix : '');
-         }
+       else if (d.date >= 1 && d.date < 7){ //if more than a day, but less than a week
+         FuzzyTime = d.date === 1 ? 'yesterday' : ' '+ d.date + ' days' + (suffix ? suffix : '');
        }
 
    //hours
